@@ -1,0 +1,2 @@
+function legendaryFarming(input) {}
+legendaryFarming();
