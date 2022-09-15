@@ -1,50 +1,43 @@
 function solve(base, height) {
-  //pyramid base
-  let h = 0;
-
-  //materials
   let stone = 0;
   let marble = 0;
   let lapisLazuli = 0;
   let gold = 0;
-
-  let counter = 0;
+  let stepsCounter = 1;
 
   for (let i = base; i >= 1; i -= 2) {
-    h++;
-    counter++;
     let totalBase = i - 2;
 
-    // Calc Required Stone. This if is required because when I subtract 2 of each itteration (width/height), the last itteration gives a negative number or zero that I don't need.
+    // shit doesn't correct without this "IF"
     if (totalBase > 0) {
-      stone += totalBase * totalBase * height;
+      stone += totalBase * totalBase * height; // the god damn stones
 
-      if (counter === 5) {
-        // calc lapis lazuli
-        lapisLazuli += (i * 4 - 4) * height;
-        counter = 0;
-      } else if (counter < 5) {
-        // calc marble
-        marble += (i * 4 - 4) * height;
+      // every 5th step - lapis lazuli
+      if (stepsCounter % 5 === 0) {
+        lapisLazuli += (i * 4 - 4) * height; // lapis
+      } else {
+        marble += (i * 4 - 4) * height; //  shitty marble
       }
+      stepsCounter++;
     }
-    // calc gold
-    gold = i;
+    gold = i * i * height; // gold on top ofc
   }
 
-  stone = Math.ceil(stone);
-  marble = Math.ceil(marble);
-  lapisLazuli = Math.ceil(lapisLazuli);
-  gold = Math.ceil(gold * gold * height);
-  let calcHeight = Math.floor(height * h);
+  let calcHeight = height * stepsCounter;
 
-  console.log(`Stone required: ${stone}`);
-  console.log(`Marble required: ${marble}`);
-  console.log(`Lapis Lazuli required: ${lapisLazuli}`);
-  console.log(`Gold required: ${gold}`);
-  console.log(`Final pyramid height: ${calcHeight}`);
-
-  // calc height of the pyramid
+  console.log(`Stone required: ${Math.ceil(stone)}`);
+  console.log(`Marble required: ${Math.ceil(marble)}`);
+  console.log(`Lapis Lazuli required: ${Math.ceil(lapisLazuli)}`);
+  console.log(`Gold required: ${Math.ceil(gold)}`);
+  console.log(`Final pyramid height: ${Math.floor(calcHeight)}`);
 }
 
-solve(12, 1);
+solve(11, 1);
+
+// output:
+
+// Stone required: 165
+// Marble required: 112
+// Lapis Lazuli required: 8
+// Gold required: 1
+// Final pyramid height: 6

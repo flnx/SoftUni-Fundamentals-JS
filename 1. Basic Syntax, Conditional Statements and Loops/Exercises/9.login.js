@@ -1,3 +1,35 @@
+// ---------- Updated Solution ----------
+function login(arr) {
+  const userName = arr.shift();
+  let isLogged = false;
+
+  for (let i = 0; i < 4; i++) {
+    let reversed = arr[i].split('').reverse('').join('');
+
+    if (userName == reversed) {
+      console.log(`User Acer logged in.`);
+      isLogged = true;
+      break;
+    }
+    console.log(`Incorrect password. Try again.`);
+  }
+
+  if (!isLogged) {
+    console.log(`User ${userName} blocked!`)
+  }
+}
+login(['Acer', 'login', 'go', 'let me in', 'recA']);
+// output:
+// Incorrect password. Try again.
+// User Acer logged in.
+
+login(['sunny','rainy','cloudy','sunny','not sunny']);
+// output:
+// Incorrect password. Try again.
+// User sunny blocked!.
+
+// !---------- Old Solution ----------
+
 function solve(input) {
   let index = 0;
   let username = input[index];
