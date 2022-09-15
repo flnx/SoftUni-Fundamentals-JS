@@ -5,4 +5,4 @@ function solve(year) {
     console.log('no');
   }
 }
-solve(4);
+solve(2000);

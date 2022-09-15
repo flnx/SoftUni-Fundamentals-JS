@@ -1,6 +1,6 @@
 function arenaTier(arr) {
   let gladiators = {};
-  for (command of arr) {
+  for (let command of arr) {
     if (command === 'Ave Cesar') {
       break;
     }
@@ -11,12 +11,11 @@ function arenaTier(arr) {
       addGladiator(name, technique, skill);
     } else {
       let [gladiatorOne, gladiatorTwo] = name.split(' vs ');
-      if (
-        !gladiators.hasOwnProperty(gladiatorOne) ||
-        !gladiators.hasOwnProperty(gladiatorTwo)
-      ) {
+      if (!gladiators.hasOwnProperty(gladiatorOne) 
+      || !gladiators.hasOwnProperty(gladiatorTwo)) {
         continue;
       }
+
       fight(gladiatorOne, gladiatorTwo, technique);
     }
   }
@@ -31,12 +30,12 @@ function arenaTier(arr) {
     gladiatorTotalSkills[gladiatorName] = sum;
   }
 
-  let sorted = Object.entries(gladiatorTotalSkills).sort(
-    (a, b) => b[1] - a[1] || a[0].localeCompare(b[0])
-  );
+  let sorted = Object.entries(gladiatorTotalSkills)
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 
   for (let [gladiatorName, skills] of sorted) {
     console.log(`${gladiatorName}: ${skills} skill`);
+
     let sortedByTechniqueAndSkill = Object.entries(gladiators[gladiatorName])
       .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
       .forEach(([technique, skill]) => console.log(`- ${technique} <!> ${skill}`));

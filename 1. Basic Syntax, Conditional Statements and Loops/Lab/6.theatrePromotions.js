@@ -4,38 +4,29 @@ function solve(typeOfDay, age) {
   if (age >= 0 && age <= 18) {
     switch (typeOfDay) {
       case 'Weekday':
-        price = 12;
-        break;
+        price = 12; break;
       case 'Weekend':
-        price = 15;
-        break;
+        price = 15; break;
       case 'Holiday':
-        price = 5;
-        break;
+        price = 5; break;
     }
   } else if (age > 18 && age <= 64) {
     switch (typeOfDay) {
       case 'Weekday':
-        price = 18;
-        break;
+        price = 18; break;
       case 'Weekend':
-        price = 20;
-        break;
+        price = 20; break;
       case 'Holiday':
-        price = 12;
-        break;
+        price = 12; break;
     }
   } else if (age > 64 && age <= 122) {
     switch (typeOfDay) {
       case 'Weekday':
-        price = 12;
-        break;
+        price = 12; break;
       case 'Weekend':
-        price = 15;
-        break;
+        price = 15; break;
       case 'Holiday':
-        price = 10;
-        break;
+        price = 10; break;
     }
   }
 
@@ -45,4 +36,4 @@ function solve(typeOfDay, age) {
     console.log('Error!');
   }
 }
-solve('Weekday', 231232113);
+solve('Weekday', 5);
