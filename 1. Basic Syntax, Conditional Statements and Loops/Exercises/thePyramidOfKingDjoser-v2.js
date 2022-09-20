@@ -21,6 +21,7 @@ function solve(base, height) {
     }
     mats.gold = i * i * height;
   }
+
   const pyramidHeight = stepsCounter * height;
   console.log(`Stone required: ${Math.ceil(mats.stone)}`);
   console.log(`Marble required: ${Math.ceil(mats.marble)}`);
@@ -29,7 +30,7 @@ function solve(base, height) {
   console.log(`Final pyramid height: ${Math.floor(pyramidHeight)}`);
 }
 
-solve(11, 1);
+solve(23, 0.5);
 
 // output:
 

@@ -5,24 +5,27 @@ function solve(base, height) {
   let gold = 0;
   let stepsCounter = 1;
 
-  for (let i = base; i >= 1; i -= 2) {
+  for (let i = base; i > 0; i -= 2) {
     let totalBase = i - 2;
 
-    // shit doesn't correct without this "IF"
+    // this shit goes wrong without this "IF"
     if (totalBase > 0) {
-      stone += totalBase * totalBase * height; // the god damn stones
+      let calcStones = totalBase * totalBase * height; // the god damn stone formula
+      stone += calcStones;
 
       // every 5th step - lapis lazuli
       if (stepsCounter % 5 === 0) {
-        lapisLazuli += (i * 4 - 4) * height; // lapis
+        let calcLapis = (i * 4 - 4) * height; // lapis lazuli formula
+        lapisLazuli += calcLapis;
       } else {
-        marble += (i * 4 - 4) * height; //  shitty marble
+        let marbleFormula = (i * 4 - 4) * height; // yes, the marble formula.
+        marble += marbleFormula;
       }
       stepsCounter++;
     }
     gold = i * i * height; // gold on top ofc
   }
-
+  // fuck math
   let calcHeight = height * stepsCounter;
 
   console.log(`Stone required: ${Math.ceil(stone)}`);
@@ -32,7 +35,7 @@ function solve(base, height) {
   console.log(`Final pyramid height: ${Math.floor(calcHeight)}`);
 }
 
-solve(11, 1);
+solve(11, 0.75);
 
 // output:
 
