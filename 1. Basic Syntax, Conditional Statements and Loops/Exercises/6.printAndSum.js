@@ -12,3 +12,7 @@ function solve(start, end) {
 }
 
 solve(5, 10);
+
+
+// 5 6 7 8 9 10 
+// Sum: 45

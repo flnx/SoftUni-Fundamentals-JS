@@ -11,6 +11,9 @@ function solve(num) {
 }
 solve(1233);
 
+
+// solution 2
+
 function solve(num) {
   let toString = num.toString();
   let result = 0;

@@ -12,8 +12,3 @@ function solve(num) {
 }
 
 solve('3');
-
-// let f = String.fromCharCode(97 + a);
-// let o = String.fromCharCode(97 + b);
-// let x = String.fromCharCode(97 + c);
-// console.log(`${f}${o}${x}`);

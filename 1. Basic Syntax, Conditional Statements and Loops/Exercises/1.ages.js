@@ -1,17 +1,19 @@
 function solve(age) {
+  let result;
   if (age < 0) {
-    console.log('out of bounds');
+    result = 'out of bounds';
   } else if (age <= 2) {
-    console.log('baby');
+    result = 'baby';
   } else if (age <= 13) {
-    console.log('child');
+    result = 'child';
   } else if (age <= 19) {
-    console.log('teenager');
+    result = 'teenager';
   } else if (age <= 65) {
-    console.log('adult');
+    result = 'adult';
   } else {
-    console.log(`elder`);
+    result = 'elder';
   }
+  console.log(result);
 }
 
-solve(65);
+solve(65); // adult

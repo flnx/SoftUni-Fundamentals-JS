@@ -23,4 +23,6 @@ function solve(firstNum, operator, secondNum) {
   console.log(result.toFixed(2));
 }
 
-solve(5, '-', 10);
+solve(25, '-', 10);
+
+// Output: 15.00

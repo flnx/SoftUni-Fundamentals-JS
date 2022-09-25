@@ -5,3 +5,5 @@ function solve(year, month, day) {
 }
 
 solve(2022, 9, 30);
+
+// Output: 2022-9-30

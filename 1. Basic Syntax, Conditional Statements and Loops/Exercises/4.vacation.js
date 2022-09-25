@@ -54,5 +54,6 @@ function solve(groupSize, groupType, day) {
 
   console.log(`Total price: ${price.toFixed(2)}`);
 }
+solve(40, 'Business', 'Friday');
 
-solve(40, 'Business', 'Saturday');
+// Total price: 436.00

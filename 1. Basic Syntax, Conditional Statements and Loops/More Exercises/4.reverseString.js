@@ -9,3 +9,5 @@ function solve(word) {
 }
 
 solve('Softuni');
+
+// Output: inutfoS

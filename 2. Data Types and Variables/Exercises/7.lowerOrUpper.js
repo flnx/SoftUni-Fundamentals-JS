@@ -6,3 +6,5 @@ function solve(letter) {
   }
 }
 solve('L');
+
+// Output: upper-case

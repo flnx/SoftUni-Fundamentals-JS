@@ -18,3 +18,5 @@ function solve(startingYield) {
 }
 
 solve(100);
+// Output: 1
+//        48

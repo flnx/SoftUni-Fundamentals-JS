@@ -9,3 +9,5 @@ function solve(nums) {
   console.log(result);
 }
 solve(245678);
+
+// Output: 32

@@ -3,3 +3,5 @@ function solve(pounds) {
   console.log(convertToDollars.toFixed(3));
 }
 solve(80);
+
+// output: 104.800

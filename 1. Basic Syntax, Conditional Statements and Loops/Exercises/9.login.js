@@ -4,57 +4,32 @@ function login(arr) {
   let isLogged = false;
 
   for (let i = 0; i < 4; i++) {
-    let reversed = arr[i].split('').reverse('').join('');
+    let reversed = arr[i].split('').reverse().join('');
 
     if (userName == reversed) {
-      console.log(`User Acer logged in.`);
+      console.log(`User ${userName} logged in.`);
       isLogged = true;
       break;
     }
-    console.log(`Incorrect password. Try again.`);
+    if (i < 3) console.log(`Incorrect password. Try again.`);
   }
 
   if (!isLogged) {
-    console.log(`User ${userName} blocked!`)
+    console.log(`User ${userName} blocked!`);
   }
 }
+
 login(['Acer', 'login', 'go', 'let me in', 'recA']);
+
+login(['sunny', 'rainy', 'cloudy', 'sunny', 'not sunny']);
+
+
 // output:
-// Incorrect password. Try again.
+// x3 Incorrect password. Try again.
 // User Acer logged in.
 
-login(['sunny','rainy','cloudy','sunny','not sunny']);
-// output:
-// Incorrect password. Try again.
-// User sunny blocked!.
+`---------------------------------`
 
-// !---------- Old Solution ----------
-
-function solve(input) {
-  let index = 0;
-  let username = input[index];
-  index++;
-  let password = '';
-  let counter = 0;
-  let isBlocked = false;
-
-  for (let i = username.length - 1; i >= 0; i--) {
-    password += username[i];
-  }
-
-  while (input[index] !== password) {
-    counter++;
-    if (counter > 3) {
-      console.log(`User ${username} blocked!`);
-      isBlocked = true;
-      break;
-    }
-    console.log('Incorrect password. Try again.');
-    index++;
-  }
-
-  if (!isBlocked) {
-    console.log(`User ${username} logged in.`);
-  }
-}
-solve(['sunny', 'rainy', 'cloudy', 'sunny', 'not sunny']);
+// output: 2
+// x3 Incorrect password. Try again.
+// User sunny blocked!

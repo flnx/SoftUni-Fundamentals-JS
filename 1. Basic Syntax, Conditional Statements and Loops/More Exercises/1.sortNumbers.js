@@ -1,4 +1,5 @@
-function solve(a, b, c) {
+function solve(a, b, c) { 
+  // sorted by using conditional statements
   if (a >= b && a >= c && b >= c) {
     console.log(a);
     console.log(b);
@@ -26,4 +27,8 @@ function solve(a, b, c) {
   }
 }
 
-solve(5, 4, 3);
+solve(2, 555, 34);
+
+// 555
+// 34
+// 2

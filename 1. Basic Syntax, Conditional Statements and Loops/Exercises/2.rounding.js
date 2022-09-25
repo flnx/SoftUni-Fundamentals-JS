@@ -13,3 +13,5 @@ function solve(round, precision) {
 }
 
 solve(10.5, 3);
+
+// output: 10.5
