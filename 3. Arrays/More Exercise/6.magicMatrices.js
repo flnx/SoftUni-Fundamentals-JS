@@ -1,21 +1,31 @@
-function solve(arr) {
-  let sum = arr[0].reduce((a, b) => a + b, 0);
-  let isMagic = true;
+function magicMatrices(arrays) {
+  const magicNum = arrays[0].reduce((acc, x) => (acc += x), 0);
+  let isMagical = true;
 
-  for (let i = 0; i < arr.length; i++) {
-    let sumRow = arr[i].reduce((a, b) => a + b, 0);
-    let sumCol = arr.map((row) => row[i]).reduce((a, b) => a + b, 0);
-
-    // A matrix is magical if the sums of the cells of every row
-    // and every column are equal.
-    if (sumRow !== sum || sumCol !== sum) {
-      isMagic = false;
+  for (let i = 0; i < arrays.length; i++) {
+    let rowSum = 0;
+    let colSum = 0;
+    for (let c = 0; c < arrays.length; c++) {
+      rowSum += arrays[i][c];
+      colSum += arrays[c][i];
+    }
+    if (rowSum !== magicNum || colSum !== magicNum) {
+      isMagical = false;
       break;
     }
   }
-
-  console.log(isMagic);
+  return isMagical;
 }
+console.log(
+  magicMatrices([
+    [4, 5, 6],
+    [6, 5, 4],
+    [5, 5, 5],
+  ])
+);
+
+// output:
+// true
 
 solve([
   [4, 5, 6],
