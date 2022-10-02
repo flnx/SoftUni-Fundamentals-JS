@@ -3,7 +3,7 @@ function login(arr) {
   const userName = arr.shift();
   let isLogged = false;
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < arr.length; i++) {
     let reversed = arr[i].split('').reverse().join('');
 
     if (userName == reversed) {

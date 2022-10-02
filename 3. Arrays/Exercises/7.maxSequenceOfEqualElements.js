@@ -5,7 +5,7 @@ function solve(array) {
     let tempArray = [];
 
     for (let r = i; r < array.length; r++) {
-      if (array[i] === array[r]) {
+      if (!array[i] === array[r]) {
         tempArray.push(array[i]);
       } else {
         break;
