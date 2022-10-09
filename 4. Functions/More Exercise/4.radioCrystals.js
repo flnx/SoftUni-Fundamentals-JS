@@ -1,21 +1,22 @@
 function solve(arr) {
   let target = arr[0];
 
+  let cut = (n) => n / 4;
+  let lap = (n) => n * 0.8;
+  let grind = (n) => n - 20;
+  let etch = (n) => n - 2;
+  let xRay = (n) => n + 1;
+
+ 
+
   for (let i = 1; i < arr.length; i++) {
     let currentCrystal = arr[i];
-
-    console.log(`Processing chunk ${arr[i]} microns`);
-
-    let cut = (n) => n / 4;
-    let lap = (n) => n * 0.8;
-    let grind = (n) => n - 20;
-    let etch = (n) => n - 2;
-    let xRay = (n) => n + 1;
-
     let cutCounter = 0;
     let lapCounter = 0;
     let grindCounter = 0;
     let etchCounter = 0;
+
+    console.log(`Processing chunk ${arr[i]} microns`);
 
     while (currentCrystal !== target) {
       while (currentCrystal / 4 >= target) {
