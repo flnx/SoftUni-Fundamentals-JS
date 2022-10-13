@@ -7,8 +7,6 @@ function solve(arr) {
   let etch = (n) => n - 2;
   let xRay = (n) => n + 1;
 
- 
-
   for (let i = 1; i < arr.length; i++) {
     let currentCrystal = arr[i];
     let cutCounter = 0;

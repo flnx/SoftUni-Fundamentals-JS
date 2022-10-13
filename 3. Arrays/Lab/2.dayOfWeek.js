@@ -9,10 +9,10 @@ function solve(day) {
     'Sunday',
   ];
 
-  if (day < 1 || day > 7) {
-    console.log('Invalid day!');
-  } else {
-    console.log(days[day - 1]);
+  if (days[day - 1]) {
+    return days[day - 1];
   }
+  return 'Invalid day!';
 }
-solve(8);
+
+console.log(solve(5)); // Friday

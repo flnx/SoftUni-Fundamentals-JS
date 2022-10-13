@@ -11,38 +11,11 @@ function solve(field, special) {
       detonationPower += range;
       range = 0;
     }
-
     field.splice(range, detonationPower);
   }
-
   console.log(field.reduce((a, b) => a + b, 0));
 }
 solve([1, 4, 4, 2, 8, 9, 1], [9, 3]);
-
-//     let specials = special.join(' ').split(' ');
-//     let specialNumber = special[0];
-
-//     while (field.includes(specialNumber)) {
-//         let index = field.indexOf(specialNumber);
-//         let leftSideSpecial = +specials[1].slice();
-//         let rightSideSpecial = +specials[1].slice();
-
-//         if (index - leftSideSpecial < 0) {
-//             leftSideSpecial = (index - leftSideSpecial) + leftSideSpecial;
-//         }
-
-//         if (index + rightSideSpecial > field.length) {
-//             rightSideSpecial = field.length - (index + 1);
-//         }
-
-//         let range = index - leftSideSpecial;
-//         let detonation = leftSideSpecial + rightSideSpecial + 1;
-
-//         field.splice(range, detonation);
-//     }
-
-//     console.log(field.reduce((a, b) => a + b, 0));
-
-// }
-// solve([1, 4, 4, 2, 8, 9, 1],
-//     [9, 3])
+// solve([1, 2, 2, 4, 2, 2, 2, 9], [4, 2]);
+// solve([1, 1, 2, 1, 1, 1, 2, 1, 1, 1], [2, 1]);
+// solve([1, 7, 7, 1, 2, 3], [7, 1]);
