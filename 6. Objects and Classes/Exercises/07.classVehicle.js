@@ -25,3 +25,7 @@ function classVehicle() {
   console.log(`Quality: ${vehicle.parts.quality}`);
 }
 classVehicle();
+
+// Van Cooper {engine: 6, power: 100, quality: 600}
+// Fuel: 0
+// Quality: 600

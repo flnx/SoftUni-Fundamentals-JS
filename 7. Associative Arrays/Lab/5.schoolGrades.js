@@ -30,3 +30,7 @@ function schoolGrades(arr) {
 }
 
 schoolGrades(['Steven 3 5 6 4', 'George 4 6', 'Tammy 2 5 3', 'Steven 6 3']);
+
+// George: 5.00
+// Steven: 4.50
+// Tammy: 3.33

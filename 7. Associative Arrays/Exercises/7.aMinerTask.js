@@ -11,8 +11,11 @@ function aMinerTask(arr) {
       materials[material] += quantity;
     }
   }
-
-  let result = Object.entries(materials).forEach(([a, b]) => console.log(`${a} -> ${b}`));
+  Object.entries(materials).forEach(([a, b]) => console.log(`${a} -> ${b}`));
 }
 
 aMinerTask(['gold', '155', 'silver', '10', 'copper', '17', 'gold', '15']);
+
+// gold -> 170
+// silver -> 10
+// copper -> 17

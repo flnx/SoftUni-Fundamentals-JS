@@ -16,10 +16,7 @@ console.log(equalArrays(['1'], ['10']));
 // Arrays are not identical. Found difference at 2 index
 // Arrays are not identical. Found difference at 0 index
 
-/* `--------------`
-   Old Solution
-`--------------`
-*/
+ // Old Solution
 
 // function solve(arr1, arr2) {
 //   let isEqual = true;

@@ -31,3 +31,13 @@ wordOccurrences([
   'third',
   'sentence',
 ]);
+
+// sentence -> 3 times
+// Here -> 2 times
+// is -> 2 times
+// the -> 2 times
+// first -> 1 times
+// another -> 1 times
+// And -> 1 times
+// finally -> 1 times
+// third -> 1 times

@@ -11,4 +11,4 @@ function solve(n) {
   console.log(result);
 }
 
-solve(6);
+solve(6); // We have a perfect number!

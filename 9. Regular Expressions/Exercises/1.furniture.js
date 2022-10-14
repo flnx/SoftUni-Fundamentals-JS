@@ -20,3 +20,8 @@ function furniture(params) {
   console.log(`Total money spend: ${finalPrice.toFixed(2)}`);
 }
 furniture(['>>Sofa<<312.23!3', '>>TV<<300!5', '>Invalid<<!5', 'Purchase']);
+
+// Bought furniture:
+// Sofa
+// TV
+// Total money spend: 2436.69

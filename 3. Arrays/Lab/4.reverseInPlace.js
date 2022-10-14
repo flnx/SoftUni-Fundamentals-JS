@@ -4,9 +4,10 @@ function reverseInPlace(arr) {
 console.log(reverseInPlace(['abc', 'def', 'hig', 'klm', 'nop'])); // nop klm hig def abc
 console.log(reverseInPlace(['33', '123', '0', 'dd'])); // dd 0 123 33
 
-`---------------`
-`Old Solution`
-`---------------`
+
+
+
+//`Old Solution`
 function solve(arr) {
   for (let i = 0; i < arr.length / 2; i++) {
     let startElement = arr[i];

@@ -8,9 +8,9 @@ console.log(evenAndOddSubtraction([1, 2, 3, 4, 5, 6])); // 3
 console.log(evenAndOddSubtraction([3, 5, 7, 9])); // -24
 console.log(evenAndOddSubtraction([2, 4, 6, 8, 10])); // 30
 
-`---------------`
+
+
 // Old Solution
-`---------------`
 
 function solve(arr) {
   let sumOdd = 0;

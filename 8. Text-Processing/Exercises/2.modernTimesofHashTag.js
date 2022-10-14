@@ -15,8 +15,9 @@ function modernTimesofHashTag(text) {
       }
     }
   }
-
-  let i = 0;
 }
 
 modernTimesofHashTag('Nowadays everyone uses # to tag a #special word in #socialMedia');
+
+// special
+// socialMedia

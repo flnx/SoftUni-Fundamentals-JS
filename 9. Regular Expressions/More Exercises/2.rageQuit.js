@@ -20,21 +20,23 @@ function rageQuit([input]) {
 
 // --------------// first try --------------- //
 
-// function rageQuit(input) {
-//   let pattern = /(?<message>[^0-9]+)(?<repeater>[0-9]{0,20})?/g;
-//   let digitsPattern = /\d/g;
-//   let match;
-//   let testMessage = '';
+function rageQuit(input) {
+  let pattern = /(?<message>[^0-9]+)(?<repeater>[0-9]{0,20})?/g;
+  let match;
+  let testMessage = '';
 
-//   while ((match = pattern.exec(input)) !== null) {
-//     let { message, repeater } = match.groups;
-//     testMessage += message.toUpperCase().repeat(Number(repeater));
-//   }
+  while ((match = pattern.exec(input)) !== null) {
+    let { message, repeater } = match.groups;
+    testMessage += message.toUpperCase().repeat(Number(repeater));
+  }
 
-//   let result = new Set(testMessage).size;
+  let result = new Set(testMessage).size;
 
-//   console.log(`Unique symbols used: ${result}`);
-//   console.log(testMessage);
-// }
+  console.log(`Unique symbols used: ${result}`);
+  console.log(testMessage);
+}
 
 rageQuit(['aSd2&5s@1']);
+
+// Unique symbols used: 5
+// ASDASD&&&&&S@

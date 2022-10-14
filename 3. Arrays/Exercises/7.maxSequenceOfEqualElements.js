@@ -1,23 +1,23 @@
-function solve(array) {
-  let newArray = [];
+function magicSum(arr) {
+  let result = [];
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     let tempArray = [];
 
-    for (let r = i; r < array.length; r++) {
-      if (!array[i] === array[r]) {
-        tempArray.push(array[i]);
-      } else {
+    for (let j = i; j < arr.length; j++) {
+      if (arr[i] != arr[j]) {
         break;
       }
+      tempArray.push(arr[i]);
     }
-
-    if (newArray.length < tempArray.length) {
-      newArray = tempArray;
+    if (result.length < tempArray.length) {
+      result = tempArray;
     }
   }
-
-  console.log(newArray.join(' '));
+  return result.join(' ');
 }
-
-solve([4, 4, 4, 4]);
+console.log(magicSum([5, 5, 5, 3, 2, 1])); // 5 5 5
+console.log(magicSum([2, 1, 1, 2, 3, 3, 2, 2, 2, 1])); // 2 2 2
+console.log(magicSum([1, 1, 1, 2, 3, 1, 3, 3])); // 1 1 1
+console.log(magicSum([4, 4, 4, 4])); // 4 4 4 4
+console.log(magicSum([0, 1, 1, 5, 2, 2, 6, 3, 3])); // 1 1

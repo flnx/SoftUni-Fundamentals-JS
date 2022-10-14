@@ -30,3 +30,10 @@ function censoredWords(text, word) {
 
 censoredWords('A small sentence with some words', 'small');
 censoredWords('Find the hidden word', 'hidden');
+
+// A ***** sentence with some words
+// Find the ****** word
+// A ***** sentence with some words
+// Find the ****** word
+// A ***** sentence with some words
+// Find the ****** word

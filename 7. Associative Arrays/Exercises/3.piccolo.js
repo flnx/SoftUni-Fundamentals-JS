@@ -34,3 +34,8 @@ piccolo([
   'IN, CA9876HH',
   'IN, CA2822UU',
 ]);
+
+// CA2822UU
+// CA2844AA
+// CA9876HH
+// CA9999TT

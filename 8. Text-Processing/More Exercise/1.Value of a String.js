@@ -17,3 +17,5 @@ function valueOfAString(arr) {
 
 valueOfAString(['HelloFromMyAwesomePROGRAM', 'LOWERCASE']);
 valueOfAString(['AC/DC', 'UPPERCASE']);
+// The total sum is: 1539
+// The total sum is: 267

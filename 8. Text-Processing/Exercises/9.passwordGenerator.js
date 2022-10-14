@@ -19,3 +19,6 @@ function passwordGenerator(arr) {
 
 passwordGenerator(['ilovepizza', 'ihatevegetables', 'orange']);
 passwordGenerator(['easymoneyeazylife', 'atleasttencharacters', 'absolute']);
+
+// Your generated password is sElbGtNgAvRtOhEGzzNpAvRlO
+// Your generated password is srTtcUrLhcnOttsSBltAEfTlyzULyOnSmysBA

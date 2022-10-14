@@ -8,3 +8,6 @@ function extractFile(input) {
   console.log(`File extension: ${extension}`);
 }
 extractFile('C:\\Internal\\training-internal\\Template.pptx.rom');
+
+// File name: Template.pptx
+// File extension: rom

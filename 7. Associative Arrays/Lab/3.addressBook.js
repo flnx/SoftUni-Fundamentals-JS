@@ -1,4 +1,4 @@
-function phoneBook(arr) {
+function adressBook(arr) {
   let addressList = {};
 
   for (const iterator of arr) {
@@ -14,7 +14,8 @@ function phoneBook(arr) {
     console.log(`${name} -> ${address}`);
   }
 }
-phoneBook([
+
+adressBook([
   'Bob:Huxley Rd',
   'John:Milwaukee Crossing',
   'Peter:Fordem Ave',
@@ -27,3 +28,11 @@ phoneBook([
   'Jeff:Gateway Way',
   'Jeff:Huxley Rd',
 ]);
+
+// Bill -> Gateway Way
+// Bob -> Redwing Ave
+// George -> Mesta Crossing
+// Jeff -> Huxley Rd
+// John -> Grover Rd
+// Peter -> Huxley Rd
+// Ted -> Gateway Way

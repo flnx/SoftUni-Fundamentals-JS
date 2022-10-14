@@ -11,8 +11,10 @@ function arenaTier(arr) {
       addGladiator(name, technique, skill);
     } else {
       let [gladiatorOne, gladiatorTwo] = name.split(' vs ');
-      if (!gladiators.hasOwnProperty(gladiatorOne) 
-      || !gladiators.hasOwnProperty(gladiatorTwo)) {
+      if (
+        !gladiators.hasOwnProperty(gladiatorOne) ||
+        !gladiators.hasOwnProperty(gladiatorTwo)
+      ) {
         continue;
       }
 
@@ -30,13 +32,14 @@ function arenaTier(arr) {
     gladiatorTotalSkills[gladiatorName] = sum;
   }
 
-  let sorted = Object.entries(gladiatorTotalSkills)
-  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  let sorted = Object.entries(gladiatorTotalSkills).sort(
+    (a, b) => b[1] - a[1] || a[0].localeCompare(b[0])
+  );
 
   for (let [gladiatorName, skills] of sorted) {
     console.log(`${gladiatorName}: ${skills} skill`);
 
-    let sortedByTechniqueAndSkill = Object.entries(gladiators[gladiatorName])
+    Object.entries(gladiators[gladiatorName])
       .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
       .forEach(([technique, skill]) => console.log(`- ${technique} <!> ${skill}`));
   }
@@ -90,3 +93,16 @@ arenaTier([
   'Gladius vs Maximilian',
   'Ave Cesar',
 ]);
+
+// Stefan: 450 skill
+// - Tiger <!> 250
+// - Duck <!> 200
+// Peter: 400 skill
+// - BattleCry <!> 400
+// Alex: 300 skill
+// - PowerPunch <!> 300
+// --------------------
+// Gladius: 700 skill
+// - Shield <!> 250
+// - Support <!> 250
+// - Heal <!> 200

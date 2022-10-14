@@ -45,3 +45,7 @@ race([
   'T$o553m&6',
   'end of race',
 ]);
+
+// 1st place: George
+// 2nd place: Peter
+// 3rd place: Tom

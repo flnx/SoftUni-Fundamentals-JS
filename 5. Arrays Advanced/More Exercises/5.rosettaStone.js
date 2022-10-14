@@ -1,8 +1,5 @@
 function rosettaStone(input) {
-  // template length
   const tempLenght = Number(input.shift());
-
-  // creating the template
   const template = [];
 
   for (let i = 0; i < tempLenght; i++) {
@@ -10,13 +7,12 @@ function rosettaStone(input) {
     template.push(line.split(' ').map(Number));
   }
 
-  // creating the matrix and convert everything to numbers
   const matrix = [];
 
   for (let line of input) {
     matrix.push(line.split(' ').map(Number));
   }
-  // decoding the message
+  
   let result = '';
 
   for (let row = 0; row < matrix.length; row++) {
@@ -45,3 +41,5 @@ rosettaStone([
   '2 17 13 19 20',
   '0 9 0 22 22',
 ]);
+
+// I CAME I SAW I CONQUERED 

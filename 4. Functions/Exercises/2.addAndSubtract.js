@@ -8,4 +8,4 @@ function solve(x, y, z) {
   console.log(finalResult);
 }
 
-solve(23, 6, 10);
+solve(23, 6, 10); // 19

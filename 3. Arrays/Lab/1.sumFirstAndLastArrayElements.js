@@ -8,9 +8,10 @@ function sumFirstAndLastArrElements(arr) {
 console.log(sumFirstAndLastArrElements([10, 17, 22, 33]));
 
 // 39
-`---------------`
+
+
 // Old Solution
-`---------------`
+
 function solve(input) {
   let firstNum = input[0];
   let lastNum = input[input.length - 1];

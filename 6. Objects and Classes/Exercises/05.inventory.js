@@ -23,3 +23,13 @@ inventory([
   'Derek / 12 / BarrelVest, DestructionSword',
   'Hes / 1 / Desolator, Sentinel, Antara',
 ]);
+
+// Hero: Hes
+// level => 1
+// items => Desolator, Sentinel, Antara
+// Hero: Derek
+// level => 12
+// items => BarrelVest, DestructionSword
+// Hero: Isacc
+// level => 25
+// items => Apple, GravityGun

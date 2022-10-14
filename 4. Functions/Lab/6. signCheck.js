@@ -1,74 +1,20 @@
-function solve(x, y, z) {
-  let popUp = '';
+function signCheck(numOne, numTwo, numThree) {
+  let counter = 0;
 
-  if (
-    (x > 0 && y > 0 && z > 0) ||
-    (x > 0 && z > 0 && y > 0) ||
-    (z > 0 && y > 0 && x > 0) ||
-    (z > 0 && x > 0 && y > 0) ||
-    (y > 0 && x > 0 && z > 0) ||
-    (y > 0 && z > 0 && x > 0)
-  ) {
-    popUp = 'Positive';
-  } else if (
-    (x > 0 && y > 0 && z < 0) ||
-    (x > 0 && z > 0 && y < 0) ||
-    (z > 0 && y > 0 && x < 0) ||
-    (z > 0 && x > 0 && y < 0) ||
-    (y > 0 && x > 0 && z < 0) ||
-    (y > 0 && z > 0 && x < 0)
-  ) {
-    popUp = 'Negative';
-  } else if (
-    (x > 0 && y < 0 && z < 0) ||
-    (x > 0 && z < 0 && y < 0) ||
-    (z > 0 && y < 0 && x < 0) ||
-    (z > 0 && x < 0 && y < 0) ||
-    (y > 0 && x < 0 && z < 0) ||
-    (y > 0 && z < 0 && x < 0)
-  ) {
-    popUp = 'Positive';
-  } else if (
-    (x < 0 && y < 0 && z < 0) ||
-    (x < 0 && z < 0 && y < 0) ||
-    (z < 0 && y < 0 && x < 0) ||
-    (z < 0 && x < 0 && y < 0) ||
-    (y < 0 && x < 0 && z < 0) ||
-    (y < 0 && z < 0 && x < 0)
-  ) {
-    popUp = 'Negative';
+  if (numOne < 0) {
+    counter++;
   }
 
-  console.log(popUp);
-}
-solve(5, 12, -15);
-
-function solve(x, y, z) {
-  let popUp = '';
-  if (x > 0 && y > 0 && z > 0) {
-    popUp = 'Positive';
-  } else if (x < 0 && y < 0 && z < 0) {
-    popUp = 'Negative';
-  } else if (
-    (x > 0 && y > 0 && z < 0) ||
-    (x > 0 && z > 0 && y < 0) ||
-    (z > 0 && y > 0 && x < 0) ||
-    (z > 0 && x > 0 && y < 0) ||
-    (y > 0 && x > 0 && z < 0) ||
-    (y > 0 && z > 0 && x < 0)
-  ) {
-    popUp = 'Negative';
-  } else if (
-    (x > 0 && y < 0 && z < 0) ||
-    (x > 0 && z < 0 && y < 0) ||
-    (z > 0 && y < 0 && x < 0) ||
-    (z > 0 && x < 0 && y < 0) ||
-    (y > 0 && x < 0 && z < 0) ||
-    (y > 0 && z < 0 && x < 0)
-  ) {
-    popUp = 'Positive';
+  if (numTwo < 0) {
+    counter++;
   }
 
-  // console.log(popUp);
+  if (numThree < 0) {
+    counter++;
+  }
+  counter = counter % 2 == 0 ? 'Positive' : 'Negative';
+
+  console.log(counter);
 }
-solve(5, 12, -15);
+
+signCheck(5, 12, -15);

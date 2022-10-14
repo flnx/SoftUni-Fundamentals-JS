@@ -7,4 +7,4 @@ function stringSubstring(word, text) {
   console.log(`${word} not found!`);
 }
 
-stringSubstring('javascript', 'JavaScript is the best programming language');
+stringSubstring('javascript', 'JavaScript is the best programming language'); // javascript

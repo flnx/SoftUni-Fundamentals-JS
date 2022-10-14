@@ -7,6 +7,7 @@ function movies(movies) {
       moviesList.push({ name: getMovie });
     } else if (movie.includes('directedBy')) {
       let [name, director] = movie.split(' directedBy ');
+      
       for (let movie of moviesList) {
         if (movie.name === name) {
           movie.director = director;
@@ -40,3 +41,6 @@ movies([
   'Batman onDate 01.08.2018',
   'Fast and Furious directedBy Rob Cohen',
 ]);
+
+// {"name":"Fast and Furious","date":"30.07.2018","director":"Rob Cohen"}
+// {"name":"Godfather","director":"Francis Ford Coppola","date":"29.07.2018"}

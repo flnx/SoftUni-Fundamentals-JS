@@ -1,4 +1,3 @@
-// solution 1
 function serializeString(arr) {
   let text = arr[0].split('');
   let textLen = text.length;
@@ -20,3 +19,12 @@ function serializeString(arr) {
 }
 
 serializeString(['avjavamsdmcalsdm']);
+
+// a:0/3/5/11
+// v:1/4
+// j:2
+// m:6/9/15
+// s:7/13
+// d:8/14
+// c:10
+// l:12

@@ -1,8 +1,8 @@
 function solve(arr) {
-  let oddPositions = arr.filter((x, i) => i % 2 !== 0);
-  let multiplyOdds = oddPositions.map((x) => x * 2);
-  let reverseNums = multiplyOdds.reverse();
-
-  console.log(multiplyOdds.join(' '));
+  return arr
+    .filter((x, i) => i % 2 !== 0)
+    .map((x) => x * 2)
+    .reverse()
+    .join(' ');
 }
-solve([10, 15, 20, 25]);
+console.log(solve([10, 15, 20, 25])); // 50 30

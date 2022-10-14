@@ -59,7 +59,7 @@ function armies(input) {
 
   function sortArmies(generalName, totalArmy) {
     console.log(`${generalName}: ${totalArmy}`);
-    let sortGeneralArmies = Object.entries(allArmies[generalName])
+    Object.entries(allArmies[generalName])
       .sort((a, b) => b[1] - a[1])
       .forEach(([name, size]) => console.log(`>>> ${name} - ${size}`));
   }

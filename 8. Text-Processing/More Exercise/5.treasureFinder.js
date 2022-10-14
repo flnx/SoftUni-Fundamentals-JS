@@ -45,3 +45,10 @@ treasureFinder([
   "'stj)>34W68Z@",
   'find',
 ]);
+
+
+// Found gold at 10N70W
+// Found Silver at 32S43W
+// Found gold at 0S123E
+// Found gold at 102N43W
+// Found ore at 23S43W

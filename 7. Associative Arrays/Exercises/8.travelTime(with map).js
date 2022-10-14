@@ -29,6 +29,15 @@ function travelTime(arr) {
 }
 
 travelTime([
+  'Bulgaria > Sofia > 500',
+  'Bulgaria > Sopot > 800',
+  'France > Paris > 2000',
+  'Albania > Tirana > 1000',
+  'Bulgaria > Sofia > 200',
+]);
+
+console.log(`--------------`);
+travelTime([
   'Bulgaria > Sofia > 25000',
   'Bulgaria > Sofia > 25000',
   'Kalimdor > Orgrimar > 25000',
@@ -36,3 +45,11 @@ travelTime([
   'Bulgaria > Varna > 25010',
   'Bulgaria > Lukovit > 10',
 ]);
+
+// Albania -> Tirana -> 1000
+// Bulgaria -> Sofia -> 200 Sopot -> 800
+// France -> Paris -> 2000
+// --------------
+// Albania -> Tirana -> 25000
+// Bulgaria -> Lukovit -> 10 Sofia -> 25000 Varna -> 25010
+// Kalimdor -> Orgrimar -> 25000

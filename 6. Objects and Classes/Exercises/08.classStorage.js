@@ -1,4 +1,4 @@
-function classStorage(input) {
+function classStorage() {
   class Storage {
     constructor(capacity) {
       this.capacity = capacity;
@@ -8,7 +8,7 @@ function classStorage(input) {
 
     addProduct(product) {
       this.storage.push(product);
-      this.capcity -= product.quantity;
+      this.capacity -= product.quantity;
       this.totalCost += product.price * product.quantity;
     }
 
@@ -20,8 +20,8 @@ function classStorage(input) {
   let productOne = { name: 'Cucamber', price: 1.5, quantity: 15 };
   let productTwo = { name: 'Tomato', price: 0.9, quantity: 25 };
   let productThree = { name: 'Bread', price: 1.1, quantity: 8 };
-
   let storage = new Storage(50);
+
 
   storage.addProduct(productOne);
   storage.addProduct(productTwo);
@@ -29,5 +29,12 @@ function classStorage(input) {
   console.log(storage.getProducts());
   console.log(storage.capacity);
   console.log(storage.totalCost);
+
 }
 classStorage();
+
+// {"name":"Cucamber","price":1.5,"quantity":15}
+// {"name":"Tomato","price":0.9,"quantity":25}
+// {"name":"Bread","price":1.1,"quantity":8}
+// 2
+// 53.8

@@ -58,3 +58,14 @@ starEnigma([
   'GQhrr|A977777(H(TTTT',
   'EHfsytsnhf?8555&I&2C9555SR',
 ]);
+
+
+// Attacked planets: 1
+// -> Alderaa
+// Destroyed planets: 1
+// -> Cantonica
+// <-------------------->
+// Attacked planets: 0
+// Destroyed planets: 2
+// -> Cantonica
+// -> Coruscant

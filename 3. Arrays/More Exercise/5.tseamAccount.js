@@ -30,7 +30,7 @@ function solve(input) {
           currentGames.push(updateGame);
           break;
         case 'Expansion':
-          let update = split.join('-');
+          let update = split.join(':');
           currentGames.splice(index + 1, 0, update);
           break;
       }

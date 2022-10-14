@@ -11,3 +11,9 @@ function solve(n) {
   console.log(matrix.join('\n'));
 }
 solve(4);
+
+
+// 4 4 4 4
+// 4 4 4 4
+// 4 4 4 4
+// 4 4 4 4

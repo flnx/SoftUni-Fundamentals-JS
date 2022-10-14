@@ -1,10 +1,9 @@
-function solve(array, rotationNumber) {
-  for (let i = 0; i < rotationNumber; i++) {
-    let takeCurrentElement = array.shift();
-    array.push(takeCurrentElement);
+function arrayRotation(arr, rotationsCounter) {
+  for (let i = 0; i < rotationsCounter; i++) {
+    const element = arr.shift();
+    arr.push(element);
   }
-  console.log(array.join(' '));
+  return arr.join(' ');
 }
 
-solve([51, 47, 32, 61, 21], 2);
-solve([32, 21, 61, 1], 4);
+console.log(arrayRotation([51, 47, 32, 61, 21], 2)); // 32 61 21 51 47

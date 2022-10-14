@@ -9,4 +9,4 @@ function convertToJSON(name, lastName, hairColor) {
   console.log(toStr);
 }
 
-convertToJSON('George', 'Jones', 'Brown');
+convertToJSON('George', 'Jones', 'Brown'); // {"name":"George","lastName":"Jones","hairColor":"Brown"}

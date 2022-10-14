@@ -4,7 +4,7 @@ function countStringOccurrences(text, word) {
   console.log(result);
 }
 
-countStringOccurrences('This is a word and it also is a sentence', 'is');
+countStringOccurrences('This is a word and it also is a sentence', 'is'); // 2
 
 // second solution
 function countStringOccurrences(text, word) {
@@ -17,4 +17,4 @@ function countStringOccurrences(text, word) {
   }
   console.log(counter);
 }
-countStringOccurrences('This is a word and it also is a sentence', 'is');
+countStringOccurrences('This is a word and it also is a sentence', 'is'); // 2

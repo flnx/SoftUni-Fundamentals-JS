@@ -7,3 +7,7 @@ function convertToObject(arr) {
 }
 
 convertToObject('{"name": "George", "age": 40, "town": "Sofia"}');
+
+// name: George
+// age: 40
+// town: Sofia

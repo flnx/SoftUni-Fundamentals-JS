@@ -25,3 +25,11 @@ companyUsers([
   'Microsoft -> CC12345',
   'HP -> BB12345',
 ]);
+
+// HP
+// -- BB12345
+// Microsoft
+// -- CC12345
+// SoftUni
+// -- AA12345
+// -- BB12345

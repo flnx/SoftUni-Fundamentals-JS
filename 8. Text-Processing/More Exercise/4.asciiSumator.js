@@ -13,4 +13,4 @@ function asciiSumator(arr) {
   console.log(result);
 }
 
-asciiSumator(['?', 'E', '@ABCEF']);
+asciiSumator(['?', 'E', '@ABCEF']); // 262

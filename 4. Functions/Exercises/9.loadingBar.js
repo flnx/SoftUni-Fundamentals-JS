@@ -10,4 +10,6 @@ function solve(n) {
   }
 }
 
-solve(100);
+solve(100); // 100% Complete!
+solve(85) // 85% Complete! Still loading...
+

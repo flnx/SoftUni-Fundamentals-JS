@@ -63,3 +63,7 @@ cardGame([
   'Andrea: QH, QC, JS, JD, JC',
   'Peter: JD, JD, JD, JD, JD, JD',
 ]);
+
+// Peter: 167
+// Tomas: 175
+// Andrea: 197

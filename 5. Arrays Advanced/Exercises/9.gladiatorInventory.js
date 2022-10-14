@@ -20,9 +20,7 @@ function solve(arr) {
         break;
     }
   }
-
-  console.log(inventory);
-
+  console.log(inventory.join(' '));
   function buy(equipment) {
     if (!inventory.includes(equipment)) {
       inventory.push(equipment);
@@ -53,8 +51,8 @@ function solve(arr) {
       let index = inventory.indexOf(newItem[0]);
       newItem = newItem.join(':');
       inventory.splice(index + 1, 0, newItem);
+      return inventory
     }
-    return inventory;
   }
 }
 solve([

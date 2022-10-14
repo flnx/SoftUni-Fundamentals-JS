@@ -18,3 +18,11 @@ function meetings(arr) {
 }
 
 meetings(['Monday Peter', 'Wednesday Bill', 'Monday Tim', 'Friday Tim']);
+
+// Scheduled for Monday
+// Scheduled for Wednesday
+// Conflict on Monday!
+// Scheduled for Friday
+// Monday -> Peter
+// Wednesday -> Bill
+// Friday -> Tim

@@ -4,3 +4,9 @@ function printCharacters(input) {
   }
 }
 printCharacters('AWord');
+
+// A
+// W
+// o
+// r
+// d

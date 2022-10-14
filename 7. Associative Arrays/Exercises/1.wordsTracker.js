@@ -1,5 +1,4 @@
 //using map
-
 function wordsTracker(arr) {
   let wordsToCheck = arr.shift().split(' ');
   let words = new Map();
@@ -43,6 +42,12 @@ wordsTracker([
   'your',
   'task',
 ]);
+
+// this - 3
+// sentence - 2
+// ------------------
+// this - 3
+// sentence - 2
 
 console.log(`------------------`);
 // using object
@@ -90,3 +95,10 @@ wordsTrackerTwo([
   'your',
   'task',
 ]);
+
+
+// this - 3
+// sentence - 2
+// ------------------
+// this - 3
+// sentence - 2

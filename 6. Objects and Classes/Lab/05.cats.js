@@ -4,7 +4,6 @@ function cats(catsData) {
       this.name = name;
       this.age = age;
     }
-
     meow() {
       console.log(`${this.name}, age ${this.age} says Meow`);
     }
@@ -24,4 +23,5 @@ function cats(catsData) {
 }
 cats(['Mellow 2', 'Tom 5']);
 
-// let kitty = new Cat();
+// Mellow, age 2 says Meow
+// Tom, age 5 says Meow

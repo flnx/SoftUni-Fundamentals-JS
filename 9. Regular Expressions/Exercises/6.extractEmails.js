@@ -13,3 +13,6 @@ function extractEmails(input) {
 extractEmails(
   'Just send email to s.miller@mit.edu and j.hopking@york.ac.uk for more information.'
 );
+
+// s.miller@mit.edu
+// j.hopking@york.ac.uk

@@ -27,6 +27,7 @@ function arenaTier(arr) {
 
       let sumgladOne = 0;
       let sumgladTwo = 0;
+
       for (let [technique, skill] of Object.entries(glads[gladOne])) {
         if (glads[gladTwo].hasOwnProperty(technique)) {
           sumgladOne += glads[gladOne][technique];
@@ -57,7 +58,7 @@ function arenaTier(arr) {
 
   for (let [gladName, skills] of sorted) {
     console.log(`${gladName}: ${skills} skill`);
-    let techniqueSkillSort = Object.entries(glads[gladName])
+       Object.entries(glads[gladName])
       .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
       .forEach(([technique, skill]) => console.log(`- ${technique} <!> ${skill}`));
   }
@@ -84,3 +85,17 @@ arenaTier([
   'Gladius vs Maximilian',
   'Ave Cesar',
 ]);
+
+// Stefan: 450 skill
+// - Tiger <!> 250
+// - Duck <!> 200
+// Peter: 400 skill
+// - BattleCry <!> 400
+// Alex: 300 skill
+// - PowerPunch <!> 300
+// --------------------
+// Gladius: 700 skill
+// - Shield <!> 250
+// - Support <!> 250
+// - Heal <!> 200
+

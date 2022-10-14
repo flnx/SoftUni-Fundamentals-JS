@@ -4,3 +4,6 @@ function substring(str, start, count) {
 }
 substring('ASentence', 1, 8);
 substring('SkipWord', 4, 7);
+
+// Sentence
+// Word

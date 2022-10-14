@@ -2,7 +2,7 @@ function solve(input) {
   let odds = 0;
   let evens = 0;
 
-  let toString = input.toString();
+  let toString = input.toString();;
 
   for (let i = 0; i < toString.length; i++) {
     let currentNum = Number(toString[i]);
@@ -16,4 +16,4 @@ function solve(input) {
   console.log(`Odd sum = ${odds}, Even sum = ${evens}`);
 }
 
-solve(1000435);
+solve(1000435); // Odd sum = 9, Even sum = 4

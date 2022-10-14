@@ -1,17 +1,16 @@
-function solve(array, mnum) {
-  let arrayL = array.length;
-  let newArray = [];
-  let saveNums = '';
+function magicSum(arr, magicNum) {
+  let result = [];
 
-  for (let i = 0; i < arrayL; i++) {
-    for (let r = i + 1; r < arrayL; r++) {
-      if (array[i] + array[r] === mnum) {
-        saveNums = `${array[i]} ${array[r]}`;
-        newArray.push(saveNums);
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++) {
+      if (arr[i] + arr[j + 1] == magicNum) {
+        result.push(`${arr[i]} ${arr[j + 1]}`);
       }
     }
   }
-  console.log(newArray.join('\n'));
+  return result.join('\n');
 }
 
-solve([1, 7, 6, 2, 19, 23], 8);
+console.log(magicSum([1, 7, 6, 2, 19, 23], 8)); // 1 7    6 2
+console.log(magicSum([14, 20, 60, 13, 7, 19, 8], 27)); // 14 13     20 7     19 8
+console.log(magicSum([1, 2, 3, 4, 5, 6], 6)); // 1 5    2 4

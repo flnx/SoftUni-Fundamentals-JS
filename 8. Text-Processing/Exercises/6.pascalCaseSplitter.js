@@ -23,4 +23,4 @@ function pascalCaseSplitter(text) {
   }
   console.log(result);
 }
-pascalCaseSplitter('SplitMeIfYouCanHaHaYouCantOrYouCan');
+pascalCaseSplitter('SplitMeIfYouCanHaHaYouCantOrYouCan'); // Split, Me, If, You, Can, Ha, Ha, You, Cant, Or, You, Can

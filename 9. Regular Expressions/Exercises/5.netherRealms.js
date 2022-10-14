@@ -34,4 +34,4 @@ function netherRealms(input) {
     console.log(`${name} - ${demonHealth} health, ${demonTotalDmg.toFixed(2)} damage`);
   } // !END OF LOOP
 }
-netherRealms('M3ph-0.5s-0.5t0.0**');
+netherRealms('M3ph-0.5s-0.5t0.0**'); // M3ph-0.5s-0.5t0.0** - 524 health, 8.00 damage

@@ -1,31 +1,30 @@
-function solve(input) {
+function ladyBugs(input) {
   let fieldSize = input[0];
   let ladybugPositions = input[1].split(' ').map(Number);
 
-  // Create Field
-  let createField = [];
-  for (let f = 0; f < fieldSize; f++) {
-    createField.push(0);
+  let field = [];
+  for (let i = 0; i < fieldSize; i++) {
+    field.push(0);
   }
-  // Put the Ladybugs on the field (starting positions)
-  ladybugPositions.forEach((i) => {
-    if (i >= 0 && i < fieldSize) {
-      createField[i] = 1;
+
+  for (let x of ladybugPositions) {
+    if (x >= 0 && x < fieldSize) {
+      field[x] = 1;
     }
-  });
+  }
 
   for (let i = 2; i < input.length; i++) {
     // create directions
-    let [travelFrom, direction, travelTo] = input[i].split(' ');
-    travelFrom = Number(travelFrom);
-    travelTo = Number(travelTo);
+    let [position, direction, flyTo] = input[i].split(' ');
+    position = Number(position);
+    flyTo = Number(flyTo);
 
-    if (travelFrom < 0 || travelFrom > fieldSize || createField[travelFrom] === 0) {
+    if (position < 0 || position > fieldSize || field[position] != 1) {
       continue;
     }
     // negative steps reversal
-    if (travelTo < 0) {
-      travelTo = Math.abs(travelTo);
+    if (flyTo < 0) {
+      flyTo = Math.abs(flyTo);
       if (direction === 'right') {
         direction = 'left';
       } else if (direction === 'left') {
@@ -33,42 +32,33 @@ function solve(input) {
       }
     }
     if (direction === 'right') {
-      // first remove remove the bug
-      createField[travelFrom] = 0;
-      let newIndex = travelFrom + travelTo;
+      field[position] = 0;
+      let newIndex = position + flyTo;
+      
       while (newIndex < fieldSize) {
-        if (createField[newIndex] === 1) {
-          newIndex += travelTo;
+        if (field[newIndex] === 1) {
+          newIndex += flyTo;
           continue;
         }
-        createField[newIndex] = 1;
+        field[newIndex] = 1;
         break;
       }
     } else if (direction === 'left') {
-      createField[travelFrom] = 0;
-      let newIndex = travelFrom - travelTo;
+      field[position] = 0;
+      let newIndex = position - flyTo;
       while (newIndex >= 0) {
-        if (createField[newIndex] === 1) {
-          newIndex -= travelTo;
+        if (field[newIndex] === 1) {
+          newIndex -= flyTo;
           continue;
         }
-        createField[newIndex] = 1;
+        field[newIndex] = 1;
         break;
       }
     }
   }
-  console.log(createField.join(' '));
+  console.log(field.join(' '));
 }
 
-solve([
-  5,
-  '1 3',
-  '3 left 2',
-  // '1 left -2'
-]);
-
-// solve([3, '0 1', '0 right 1', '2 right 1'])
-
-// solve([5, '3', '3 left 2', '1 left -2'])
-
-// solve([3, '0 1 2', '0 right 1', '1 right 1', '2 right 1'])
+ladyBugs([3, '0 1', '0 right 1', '2 right 1']); // 1 1 0
+ladyBugs([5, '3', '3 left 2', '1 left -2']); // 0 0 0 1 0
+ladyBugs([3, '0 1 2', '0 right 1', '1 right 1', '2 right 1']); // 0 0 0

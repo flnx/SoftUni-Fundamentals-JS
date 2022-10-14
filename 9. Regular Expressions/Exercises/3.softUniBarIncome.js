@@ -5,7 +5,6 @@ function softUniBarIncome(input) {
   while (input[0] !== 'end of shift') {
     let line = input.shift();
     let match = pattern.exec(line);
-    console.log(match);
 
     if (match !== null) {
       let [_, name, product, qty, price] = match;
@@ -24,3 +23,8 @@ softUniBarIncome([
   '%Maria%<Cola>|1|2.4$',
   'end of shift',
 ]);
+
+// George: Croissant - 20.60
+// Peter: Gum - 1.30
+// Maria: Cola - 2.40
+// Total income: 24.30
