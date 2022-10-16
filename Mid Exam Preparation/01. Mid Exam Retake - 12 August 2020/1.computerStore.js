@@ -12,7 +12,6 @@ function computerStore(arr) {
       console.log('Invalid price!');
       continue;
     }
-    // price = price * 1.2;
     totalPrice += price;
   }
 
@@ -21,7 +20,7 @@ function computerStore(arr) {
     return;
   }
 
-  let totalTax = totalPrice * 0.20;
+  let totalTax = totalPrice * 0.2;
   let totalPriceWithTax = totalPrice + totalTax;
   const customerType = arr[arr.length - 1];
 

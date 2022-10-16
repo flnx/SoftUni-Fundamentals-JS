@@ -29,6 +29,7 @@ function solve(arr) {
     let endIndex = Math.max(a, b);
     let getStart = newArr.splice(startIndex, 1);
     let getEnd = newArr.splice(endIndex - 1, 1);
+
     newArr.splice(startIndex, 0, getEnd[0]);
     newArr.splice(endIndex, 0, getStart[0]);
     return newArr;
@@ -42,7 +43,6 @@ function solve(arr) {
     return newArr;
   }
 }
-
 solve([
   '23 -2 321 87 42 90 -123',
   'swap 1 3',
