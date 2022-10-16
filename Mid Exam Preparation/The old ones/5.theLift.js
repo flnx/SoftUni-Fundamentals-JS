@@ -2,12 +2,12 @@ function solve(input) {
   let queue = Number(input[0]);
   let freeSpots = input[1].split(' ').map(Number);
 
-  for (let currentSpot = 0; currentSpot < freeSpots.length; currentSpot++) {
+  for (let i = 0; i < freeSpots.length; i++) {
     if (queue === 0) {
       break;
     }
-    while (freeSpots[currentSpot] < 4) {
-      freeSpots[currentSpot]++;
+    while (freeSpots[i] < 4) {
+      freeSpots[i]++;
       queue--;
       if (queue === 0) {
         break;
