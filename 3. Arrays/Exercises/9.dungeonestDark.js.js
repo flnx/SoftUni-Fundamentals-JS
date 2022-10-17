@@ -1,49 +1,38 @@
 function dungeonestDark(input) {
   const character = { health: 100, coins: 0, bestRoom: 0 };
-
-  const actions = {
-    chest(coinsFound) {
-      character.coins += coinsFound;
-      console.log(`You found ${coinsFound} coins.`);
-    },
-    potion(hp) {
-      if (hp + character.health > 100) {
-        hp = 100 - character.health;
-        character.health = 100;
-      } else {
-        character.health += hp;
-      }
-      console.log(`You healed for ${hp} hp.\nCurrent health: ${character.health} hp.`);
-    },
-    monsters(monster, damage) {
-      if (character.health > damage) {
-        character.health -= damage;
-        console.log(`You slayed ${monster}.`);
-        return;
-      }
-      character.health -= damage;
-      console.log(`You died! Killed by ${monster}.\nBest room: ${character.bestRoom}`);
-    },
-  };
-
+  const actions = { chest, potion, monsters };
   const commands = input.join('').split('|');
 
   for (let x of commands) {
-    let [room, num] = x.split(' ');
+    let [type, num] = x.split(' ');
     num = Number(num);
     character.bestRoom++;
+    
+    actions[type] ? actions[type](num) : actions.monsters(type, num);
+    if (character.health < 1) return;
+  }
+  console.log(`You've made it!\nCoins: ${character.coins}\nHealth: ${character.health}`);
 
-    if (actions[room]) {
-      actions[room](num);
-    } else {
-      actions.monsters(room, num);
+  function potion(hp) {
+    if (hp + character.health > 100) {
+      hp = 100 - character.health;
     }
-
-    if (character.health < 1) break;
+    character.health += hp;
+    console.log(`You healed for ${hp} hp.\nCurrent health: ${character.health} hp.`);
   }
 
-  if (character.health > 0) {
-    console.log(`You've made it!\nCoins: ${character.coins}\nHealth: ${character.health}`);
+  function chest(coinsFound) {
+    character.coins += coinsFound;
+    console.log(`You found ${coinsFound} coins.`);
+  }
+
+  function monsters(monster, damage) {
+    character.health -= damage;
+    if (character.health == 0) {
+      console.log(`You died! Killed by ${monster}.\nBest room: ${character.bestRoom}`);
+      return;
+    }
+    console.log(`You slayed ${monster}.`);
   }
 }
 
@@ -72,7 +61,6 @@ dungeonestDark(['cat 10|potion 30|orc 10|chest 10|snake 25|chest 110']);
 // You've made it!
 // Coins: 120
 // Health: 65
-
 
 // ---------------
 // old solution

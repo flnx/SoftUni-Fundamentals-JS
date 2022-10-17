@@ -51,7 +51,7 @@ function solve(arr) {
       let index = inventory.indexOf(newItem[0]);
       newItem = newItem.join(':');
       inventory.splice(index + 1, 0, newItem);
-      return inventory
+      return inventory;
     }
   }
 }
