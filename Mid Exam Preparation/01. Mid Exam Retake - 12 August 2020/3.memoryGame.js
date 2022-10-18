@@ -9,10 +9,14 @@ function memoryGame(arr) {
       return;
     }
 
-    let indexes = nums.split(' ').map(Number).sort((a, b) => a - b);
-    let [num1, num2] = indexes;
+    let indexes = nums
+      .split(' ')
+      .map(Number)
+      .sort((a, b) => a - b);
+
+    const [num1, num2] = indexes;
     moves++;
-    
+
     if (playerCheats(num1, num2, indexes)) {
       addElements();
       console.log(`Invalid input! Adding additional elements to the board`);
@@ -26,11 +30,11 @@ function memoryGame(arr) {
       return;
     }
   }
-  
+
   function doesNotHaveDuplicates() {
     return sequence.every((val, i) => sequence.indexOf(val) == i);
   }
-  
+
   function checkForMatch(elem1, elem2) {
     if (sequence[elem1] == sequence[elem2]) {
       console.log(`Congrats! You have found matching elements - ${sequence[elem1]}!`);
@@ -40,14 +44,14 @@ function memoryGame(arr) {
     }
     console.log('Try again!');
   }
-  
+
   function addElements() {
     const middle = Math.floor(sequence.length / 2);
     sequence.splice(middle, 0, ...[`-${moves}a`, `-${moves}a`]);
   }
-  
+
   function playerCheats(n1, n2, indexes) {
-    return indexes.some(x => x < 0 || x > sequence.length - 1 || n1 == n2);
+    return indexes.some((x) => x < 0 || x > sequence.length - 1 || n1 == n2);
   }
 }
 
