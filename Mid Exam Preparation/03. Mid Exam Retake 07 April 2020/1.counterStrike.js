@@ -15,11 +15,10 @@ function counterStrike(arr) {
 
     wins++;
     energy -= distance;
-    
+
     if (wins % 3 == 0) {
       energy += wins;
     }
-
   }
   console.log(`Won battles: ${wins}. Energy left: ${energy}`);
 }
