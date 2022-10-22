@@ -21,9 +21,8 @@ function solve(arr) {
     let temp = [];
 
     for (let i = 0; i < result.length - 1; i++) {
-      temp[i] = result[i] + result[i + 1];
+      temp[i] = result[i] + result[i + 1]; // 1 + 2 = 3 | 2 + 3 = 5
     }
-
     result = temp;
   }
 

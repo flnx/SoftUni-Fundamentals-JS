@@ -14,7 +14,5 @@ function numbers(integers) {
 }
 
 console.log(numbers('10 20 30 40 50'));
-
 // Output:
-
 // 50 40
