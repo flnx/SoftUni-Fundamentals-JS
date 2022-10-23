@@ -12,15 +12,15 @@ function manOwar(arr) {
   };
 
   for (let line of arr) {
-    let [action, i, i2, wDmg] = line.split(' ');
-    i = Number(i);
-    i2 = Number(i2);
+    let [action, num1, num2, num3] = line.split(' ');
+    num1 = Number(num1);
+    num2 = Number(num2);
 
     const commandFn = commands[action];
-    const hasShipSunken = commandFn(i, i2, wDmg);
+    const hasShipSunk = commandFn(num1, num2, num3);
 
-    if (hasShipSunken) {
-      console.log(hasShipSunken);
+    if (hasShipSunk) {
+      console.log(hasShipSunk);
       return;
     }
   }
