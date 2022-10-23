@@ -33,7 +33,12 @@ function solve(data) {
         let lastIndex = Number(command[1]);
         let damageTaken = Number(command[2]);
 
-        if ( startIndex < 0 || startIndex > pirateShip.length - 1 || lastIndex < 0 || lastIndex > pirateShip.length - 1) {
+        if (
+          startIndex < 0 ||
+          startIndex > pirateShip.length - 1 ||
+          lastIndex < 0 ||
+          lastIndex > pirateShip.length - 1
+        ) {
           index++;
           command = data[index];
           continue;
