@@ -33,7 +33,7 @@ function solve(arr) {
   }
 
   console.log(`Coffees:\n${state.join(' ')}`);
-  
+
   function prefer(items) {
     items = items.map(Number).sort((a, b) => a - b);
     const isInvalid = items.some((x) => x < 0 || x > state.length - 1);
