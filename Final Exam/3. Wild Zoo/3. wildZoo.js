@@ -43,7 +43,7 @@ function wildZoo(arr) {
     if (!animals[name]) {
       return (animals[name] = { foodNeeded, area });
     }
-    
+
     animals[name].foodNeeded += foodNeeded;
     animals[name].area = area;
   }
